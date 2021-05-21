@@ -1,0 +1,208 @@
+/* || Root */
+:root {
+}
+
+/* || General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fafafa;
+  color: #000000;
+  line-height: 1.5rem;
+  font-size: 0.8rem;
+}
+h2,
+h4 {
+  line-height: 1.25;
+}
+h2 {
+  font-family: 'PT Serif', serif;
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1.2rem;
+}
+img {
+  width: 100%;
+  float: left;
+}
+a {
+  color: #a9a9a9;
+}
+
+/* || Main */
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+/* section */
+.section {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 925px;
+  margin-bottom: 5rem;
+}
+.section-header {
+  display: flex;
+  flex-direction: column;
+}
+
+/* title/intro */
+.title {
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+}
+.intro h4 {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.intro p {
+  font-weight: 400;
+  margin-bottom: 4rem;
+}
+
+/* gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+  gap: 2.5rem;
+}
+
+.photo-2,
+.photo-4,
+.photo-6 {
+  padding-right: 1rem;
+  position: relative;
+  top: 2.5rem;
+}
+.name {
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: capitalize;
+}
+.job {
+  text-transform: uppercase;
+  font-family: 'PT Serif', serif;
+  font-size: 0.6rem;
+
+  position: relative;
+  float: right;
+  z-index: 100;
+  transform: rotate(90deg);
+}
+.photo-1 .job {
+  bottom: 12.6rem;
+  left: 3rem;
+}
+.photo-2 .job {
+  bottom: 12.6rem;
+  left: 2.6rem;
+}
+.photo-3 .job {
+  bottom: 13.5rem;
+  left: 2.05rem;
+}
+.photo-4 .job {
+  bottom: 12.55rem;
+  left: 2.5rem;
+}
+.photo-5 .job {
+  bottom: 13.65rem;
+  left: 2.22rem;
+}
+.photo-6 .job {
+  bottom: 12.85rem;
+  left: 2.25rem;
+}
+
+@media screen and (min-width: 740px) {
+  /* section */
+  .section-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    padding: 2rem 0;
+  }
+
+  /* title/intro */
+  .title {
+    margin-top: 2rem;
+  }
+
+  .intro h4 {
+    margin-top: 2.75rem;
+  }
+
+  /* gallery */
+  .gallery {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5rem;
+  }
+  .photo-2,
+  .photo-4,
+  .photo-6 {
+    padding: 0;
+    top: 0;
+  }
+  .photo-2,
+  .photo-5 {
+    top: 5rem;
+  }
+  .name {
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: capitalize;
+  }
+  .job {
+    text-transform: uppercase;
+    font-family: 'PT Serif', serif;
+    font-size: 0.85rem;
+    padding-right: 2rem;
+
+    float: right;
+    transform: rotate(90deg);
+  }
+  .photo-1 .job {
+    bottom: 20.65rem;
+    left: 6rem;
+  }
+  .photo-2 .job {
+    bottom: 21.65rem;
+    left: 5.45rem;
+  }
+  .photo-3 .job {
+    bottom: 21.9rem;
+    left: 4.5rem;
+  }
+  .photo-4 .job {
+    bottom: 21.55rem;
+    left: 5rem;
+  }
+  .photo-5 .job {
+    bottom: 22.15rem;
+    left: 4.9rem;
+  }
+  .photo-6 .job {
+    bottom: 21.8rem;
+    left: 4.7rem;
+  }
+}
+
+/* footer */
+.footer {
+  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #a9a9a9;
+}

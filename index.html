@@ -16,80 +16,65 @@
       href="https://devchallenges.io/"
     />
 
+    <link rel="stylesheet" href="style.css" type="text/css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
 
     <title>Devchallenges</title>
-
-    <style>
-      body {
-        font-family: "Poppins", sans-serif;
-      }
-
-      ul {
-        padding-left: 24px;
-      }
-
-      li {
-        margin-bottom: 8px;
-      }
-
-      .welcome {
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .welcome-text {
-        margin-top: 30vh;
-        font-weight: 500;
-      }
-
-      .welcome-text p {
-        font-size: 1rem;
-        font-weight: 400;
-      }
-
-      .welcome-text h1 {
-        font-size: 1.5rem;
-      }
-
-      .welcome-text a {
-        color: #f7542e;
-      }
-    </style>
   </head>
+
   <body>
-    <div class="welcome">
-      <div class="welcome-text">
-        <h1>
-          Welcome to
-          <a href="https://devchallenges.io/" target="_blank"
-            >devchallenges.io</a
-          >
-        </h1>
-
-        <p>
-          If you have any questions, don't hesitate to ask on Discord. Here are
-          7 general steps to complete the challenge:
-        </p>
-      </div>
-
-      <ul>
-        <li><b>Step 1:</b> Create a new repository on github</li>
-        <li><b>Step 2:</b> Copy resources, README.md to your repository</li>
-        <li>
-          <b>Step 3:</b> Login to Figma to checkout font, color, spacing,..
-        </li>
-        <li><b>Step 4:</b> Complete all user stories</li>
-        <li><b>Step 5:</b> Update README.md</li>
-        <li><b>Step 6:</b> Deploy your app and submit your solution</li>
-        <li>
-          <b>Step 7:</b> Share your solution on Discord, Twitter and other
-          platforms to ask for feedback
-        </li>
-      </ul>
-    </div>
+    <main>
+      <section class="section">
+        <div class="section-header">
+          <div class="title">
+            <h2>The creative crew</h2>
+          </div>
+          <div class="intro">
+            <h4>who we are</h4>
+            <p>We are a team of creatively diverse, driven, innovative individuals working in various locations around the world.</p>
+          </div>
+        </div>
+        <article class="gallery">
+          <div class="img-container photo-1">
+            <img src="photo1.png" alt="photo 1">
+            <p class="name">Bill Mahoney</p>
+            <p class="job">product owner</p>
+          </div>
+          <div class="img-container photo-2">
+            <img src="photo2.png" alt="photo 2">
+            <p class="name">Saba Cabrera</p>
+            <p class="job">art director</p>
+          </div>
+          <div class="img-container photo-3">
+            <img src="photo3.png" alt="photo 3">
+            <p class="name">Shae Le</p>
+            <p class="job">Tech lead</p>
+          </div>
+          <div class="img-container photo-4">
+            <img src="photo4.png" alt="photo 4">
+            <p class="name">Skylah Lu</p>
+            <p class="job">ux designer</p>
+          </div>
+          <div class="img-container photo-5">
+            <img src="photo5.png" alt="photo 5">
+            <p class="name">Griff richards</p>
+            <p class="job">developer</p>
+          </div>
+          <div class="img-container photo-6">
+            <img src="photo6.png" alt="photo 6">
+            <p class="name">stan john</p>
+            <p class="job">developer</p>
+          </div>
+        </article>
+      </section>
+      <footer class="footer">
+        created by <a href="#">jjrock36</a> - devChallenges.io
+      </footer>
+    </main>
   </body>
 </html>
