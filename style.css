@@ -1,5 +1,11 @@
 /* || Root */
 :root {
+  --font-1: "Poppins", sans-serif;
+  --font-2: "PT Serif", serif;
+
+  --white-1: #fafafa;
+  --black-1: #000000;
+  --gray-1: #a9a9a9;
 }
 
 /* || General Styling */
@@ -9,62 +15,98 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #fafafa;
-  color: #000000;
+  min-height: 100vh;
+  font-family: var(--font-1);
+  background-color: var(--white-1);
+  color: var(--black-1);
+  padding: 5rem 0.75rem 1.5rem;
   line-height: 1.5rem;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
+  overflow: auto;
+  overflow: -moz-scrollbars-none;
+  scrollbar-width: none;
 }
-h2,
-h4 {
-  line-height: 1.25;
+body::webkit-scrollbar {
+  width: 0 !important;
+  display: none;
+}
+h1 {
+  font-family: var(--font-2);
+  font-size: 2.25rem;
 }
 h2 {
-  font-family: 'PT Serif', serif;
-  font-size: 2rem;
-}
-h4 {
-  font-size: 1.2rem;
+  font-size: 1.125rem;
 }
 img {
-  width: 100%;
-  float: left;
+  width: 90%;
 }
 a {
-  color: #a9a9a9;
+  color: var(--gray-1);
+}
+@media screen and (min-width: 760px) {
+  body {
+    font-size: 1.125rem;
+    padding-top: 7rem;
+  }
+  img {
+    width: 95%;
+  }
 }
 
 /* || Main */
 main {
-  min-height: 100vh;
   display: grid;
-  place-items: center;
+  grid-template-rows: auto 1fr auto;
 }
-
-/* section */
-.section {
-  width: 90vw;
-  margin: 0 auto;
-  max-width: 925px;
-  margin-bottom: 5rem;
+@media screen and (min-width: 760px) {
+  main {
+    max-width: 924px;
+    margin: 0 auto;
+  }
 }
-.section-header {
+/* header */
+.header {
   display: flex;
   flex-direction: column;
+  margin-bottom: 4rem;
 }
-
-/* title/intro */
+.header h1 {
+  letter-spacing: -0.15rem;
+}
 .title {
   font-weight: 700;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
 }
-.intro h4 {
+.intro h2 {
   text-transform: uppercase;
   font-weight: 600;
+  margin-bottom: 0.625rem;
 }
 .intro p {
+  width: 35ch;
   font-weight: 400;
-  margin-bottom: 4rem;
+  line-height: 1.25rem;
+}
+@media screen and (min-width: 760px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 2.5rem 0 0.5rem;
+    margin-bottom: 6rem;
+  }
+  .title {
+    margin: 0;
+  }
+  .intro p {
+    line-height: 1.625rem;
+  }
+}
+/* section */
+.section {
+  margin: 0 auto;
+  max-width: 925px;
+  margin-bottom: 10rem;
 }
 
 /* gallery */
@@ -72,13 +114,16 @@ main {
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto auto;
-  gap: 2.5rem;
+  gap: 2rem;
+  margin: 0 auto;
+  padding: 0 0.5rem;
 }
-
+.container {
+  position: relative;
+}
 .photo-2,
 .photo-4,
 .photo-6 {
-  padding-right: 1rem;
   position: relative;
   top: 2.5rem;
 }
@@ -89,64 +134,50 @@ main {
 }
 .job {
   text-transform: uppercase;
-  font-family: 'PT Serif', serif;
-  font-size: 0.6rem;
-
-  position: relative;
-  float: right;
-  z-index: 100;
+  font-family: "PT Serif", serif;
+  font-size: 0.625rem;
+  font-weight: 400;
+  position: absolute;
   transform: rotate(90deg);
 }
 .photo-1 .job {
-  bottom: 12.6rem;
-  left: 3rem;
+  top: 1.875rem;
+  right: -2.4rem;
 }
 .photo-2 .job {
-  bottom: 12.6rem;
-  left: 2.6rem;
+  top: 1.5rem;
+  right: -2rem;
 }
 .photo-3 .job {
-  bottom: 13.5rem;
-  left: 2.05rem;
+  top: 0.9rem;
+  right: -1.425rem;
 }
 .photo-4 .job {
-  bottom: 12.55rem;
-  left: 2.5rem;
+  top: 1.25rem;
+  right: -1.8rem;
 }
 .photo-5 .job {
-  bottom: 13.65rem;
-  left: 2.22rem;
+  top: 1rem;
+  right: -1.55rem;
 }
 .photo-6 .job {
-  bottom: 12.85rem;
-  left: 2.25rem;
+  top: 1rem;
+  right: -1.55rem;
 }
 
-@media screen and (min-width: 740px) {
+@media screen and (min-width: 760px) {
   /* section */
-  .section-header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    padding: 2rem 0;
+  .section {
+    margin-bottom: 12rem;
   }
-
-  /* title/intro */
-  .title {
-    margin-top: 2rem;
-  }
-
-  .intro h4 {
-    margin-top: 2.75rem;
-  }
-
   /* gallery */
   .gallery {
     display: grid;
     justify-content: center;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 5rem;
+    column-gap: 5rem;
+    row-gap: 7.875rem;
   }
   .photo-2,
   .photo-4,
@@ -160,41 +191,40 @@ main {
   }
   .name {
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.125rem;
     text-transform: capitalize;
+    margin-top: 0.875rem;
   }
   .job {
     text-transform: uppercase;
-    font-family: 'PT Serif', serif;
-    font-size: 0.85rem;
-    padding-right: 2rem;
-
-    float: right;
+    font-family: "PT Serif", serif;
+    font-size: 0.75rem;
+    position: absolute;
     transform: rotate(90deg);
   }
   .photo-1 .job {
-    bottom: 20.65rem;
-    left: 6rem;
+    top: 2.45rem;
+    right: -3.25rem;
   }
   .photo-2 .job {
-    bottom: 21.65rem;
-    left: 5.45rem;
+    top: 1.9rem;
+    right: -2.7rem;
   }
   .photo-3 .job {
-    bottom: 21.9rem;
-    left: 4.5rem;
+    top: 1.25rem;
+    right: -2.075rem;
   }
   .photo-4 .job {
-    bottom: 21.55rem;
-    left: 5rem;
+    top: 1.6rem;
+    right: -2.5rem;
   }
   .photo-5 .job {
-    bottom: 22.15rem;
-    left: 4.9rem;
+    top: 1.4rem;
+    right: -2.2rem;
   }
   .photo-6 .job {
-    bottom: 21.8rem;
-    left: 4.7rem;
+    top: 1.4rem;
+    right: -2.2rem;
   }
 }
 
@@ -204,5 +234,5 @@ main {
   left: 0;
   right: 0;
   bottom: 0;
-  color: #a9a9a9;
+  color: var(--gray-1);
 }
